@@ -1,0 +1,8 @@
+#modeToggle {
+  -fx-background-color: #f4f4f4;
+}
+
+#anchorPane {
+    -fx-background-image: url("file:///F:/Git_desktop/EnglishApplication/src/main/resources/image/pngtree-an-old-bookcase-in-a-library-image_2642908.jpg");
+    -fx-background-size: cover;
+}
