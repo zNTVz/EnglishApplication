@@ -1,4 +1,4 @@
-package dictionary.ui.controller;
+package dictionary.sub_ui.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

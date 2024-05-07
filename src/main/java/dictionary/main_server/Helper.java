@@ -1,4 +1,4 @@
-package dictionary.server;
+package dictionary.main_server;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

@@ -8,7 +8,7 @@
 <?import javafx.scene.web.HTMLEditor?>
 <AnchorPane fx:id="anchorPane" prefHeight="707.0" prefWidth="657.0"
     xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="dictionary.ui.controller.AddWord">
+    fx:controller="dictionary.sub_ui.controller.AddWord">
     <TextField fx:id="inputText" layoutX="38.0" layoutY="142.0" prefHeight="44.0" prefWidth="581.0"
         promptText="Nhập từ cần thêm vào đây">
         <font>

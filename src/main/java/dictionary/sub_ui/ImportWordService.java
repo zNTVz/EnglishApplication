@@ -1,4 +1,4 @@
-package dictionary.ui;
+package dictionary.sub_ui;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;

@@ -1,4 +1,4 @@
-package dictionary.server;
+package dictionary.main_server;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

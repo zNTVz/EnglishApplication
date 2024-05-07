@@ -1,4 +1,4 @@
-package dictionary.ui;
+package dictionary.sub_ui;
 
 import java.io.File;
 import javafx.stage.DirectoryChooser;

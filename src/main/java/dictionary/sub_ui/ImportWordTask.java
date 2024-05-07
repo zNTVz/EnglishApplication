@@ -1,8 +1,8 @@
-package dictionary.ui;
+package dictionary.sub_ui;
 
 import dictionary.App;
-import dictionary.server.Helper;
-import dictionary.ui.controller.Application;
+import dictionary.main_server.Helper;
+import dictionary.sub_ui.controller.Application;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

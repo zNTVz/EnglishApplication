@@ -1,8 +1,8 @@
-package dictionary.ui.controller;
+package dictionary.sub_ui.controller;
 
-import dictionary.server.History;
-import dictionary.server.TextToSpeech;
-import dictionary.server.Trie;
+import dictionary.main_server.History;
+import dictionary.main_server.TextToSpeech;
+import dictionary.main_server.Trie;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -134,41 +134,10 @@ public class Application {
      */
     public void prepareButtonIcon(boolean mode) {
         String suffix = (mode ? "light" : "dark");
-        ImageView addIcon = new ImageView("icon/add-icon-" + suffix + ".png");
-        addIcon.setFitHeight(18);
-        addIcon.setFitWidth(18);
-        ImageView infoIcon = new ImageView("icon/info-icon-" + suffix + ".png");
-        infoIcon.setFitHeight(18);
-        infoIcon.setFitWidth(18);
-        ImageView helpIcon = new ImageView("icon/help-icon-" + suffix + ".png");
-        helpIcon.setFitHeight(18);
-        helpIcon.setFitWidth(18);
-        ImageView exportIcon = new ImageView("icon/export-icon-" + suffix + ".png");
-        exportIcon.setFitHeight(18);
-        exportIcon.setFitWidth(18);
-        ImageView pronounceIcon = new ImageView("icon/pronounce-icon-" + suffix + ".png");
-        pronounceIcon.setFitHeight(18);
-        pronounceIcon.setFitWidth(18);
-        ImageView editIcon = new ImageView("icon/edit-icon-" + suffix + ".png");
-        editIcon.setFitHeight(18);
-        editIcon.setFitWidth(18);
-        ImageView deleteIcon = new ImageView("icon/delete-icon-" + suffix + ".png");
-        deleteIcon.setFitHeight(18);
-        deleteIcon.setFitWidth(18);
-        ImageView googleIcon = new ImageView("icon/google-icon-" + suffix + ".png");
-        googleIcon.setFitHeight(18);
-        googleIcon.setFitWidth(18);
         ImageView modeIcon = new ImageView("icon/mode-icon-" + suffix + ".png");
         modeIcon.setFitHeight(30);
         modeIcon.setFitWidth(30);
 
-        addWordButton.setGraphic(addIcon);
-        showInformationButton.setGraphic(infoIcon);
-        showInstructionButton.setGraphic(helpIcon);
-        exportButton.setGraphic(exportIcon);
-        pronounceButton.setGraphic(pronounceIcon);
-        editButton.setGraphic(editIcon);
-        deleteButton.setGraphic(deleteIcon);
         modeToggle.setGraphic(modeIcon);
     }
 
@@ -332,6 +301,38 @@ public class Application {
         }
     }
 
+    /**
+     * Change scene to sentences translating (Google Translate).
+     *
+     * @param event action event
+     */
+    @FXML
+    public void changeToSentencesTranslating(ActionEvent event) {
+        try {
+            Parent root =
+                    FXMLLoader.load(
+                            Objects.requireNonNull(
+                                    getClass()
+                                            .getClassLoader()
+                                            .getResource("fxml/SentencesTranslating.fxml")));
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            if (!Application.isLightMode()) {
+                scene.getStylesheets()
+                        .add(
+                                Objects.requireNonNull(
+                                                getClass()
+                                                        .getResource(
+                                                                "/css/SentencesTranslating-dark.css"))
+                                        .toExternalForm());
+            }
+            appStage.setTitle("Sentences Translator");
+            appStage.setScene(scene);
+            appStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /** Pronounce the English word that is currently showed in the `webView`. */
     @FXML

@@ -1,8 +1,8 @@
-package dictionary.ui.controller;
+package dictionary.sub_ui.controller;
 
 import static dictionary.App.dictionary;
 
-import dictionary.ui.HelperUI;
+import dictionary.sub_ui.HelperUI;
 import java.io.IOException;
 import java.util.Objects;
 import javafx.application.Platform;

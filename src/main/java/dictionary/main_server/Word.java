@@ -1,4 +1,4 @@
-package dictionary.server;
+package dictionary.main_server;
 
 public class Word {
     private final String wordTarget;

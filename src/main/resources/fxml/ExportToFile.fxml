@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <AnchorPane id="anchorPane" prefHeight="206.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/17"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.ui.controller.ExportToFile">
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.sub_ui.controller.ExportToFile">
     <TextField fx:id="fileName" layoutX="17.0" layoutY="95.0" prefHeight="34.0" prefWidth="475.0"
         promptText="Tên file xuất...">
         <font>

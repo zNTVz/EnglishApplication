@@ -1,9 +1,9 @@
 package dictionary;
 
-import dictionary.server.DatabaseDictionary;
-import dictionary.server.Dictionary;
-import dictionary.server.History;
-import dictionary.server.LocalDictionary;
+import dictionary.main_server.DatabaseDictionary;
+import dictionary.main_server.Dictionary;
+import dictionary.main_server.History;
+import dictionary.main_server.LocalDictionary;
 import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Optional;

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.ui.controller.Controller2">
+<AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.sub_ui.controller.Controller2">
     <children>
         <Button layoutX="206.0" layoutY="558.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="63.0" prefWidth="432.0" text="TRY ANOTHER WORD" textFill="#d0184c">
             <font>

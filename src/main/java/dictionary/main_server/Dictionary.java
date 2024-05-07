@@ -1,4 +1,4 @@
-package dictionary.server;
+package dictionary.main_server;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;

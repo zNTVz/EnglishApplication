@@ -1,7 +1,7 @@
-package dictionary.ui.controller;
+package dictionary.sub_ui.controller;
 
-import dictionary.ui.HelperUI;
-import dictionary.ui.ImportWordService;
+import dictionary.sub_ui.HelperUI;
+import dictionary.sub_ui.ImportWordService;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

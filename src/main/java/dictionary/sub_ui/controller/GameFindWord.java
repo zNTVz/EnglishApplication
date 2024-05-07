@@ -1,4 +1,4 @@
-package dictionary.ui.controller;
+package dictionary.sub_ui.controller;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
