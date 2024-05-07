@@ -3,8 +3,10 @@ package dictionary.sub_ui.controller;
 import static dictionary.App.dictionary;
 
 import dictionary.sub_ui.HelperUI;
+
 import java.io.IOException;
 import java.util.Objects;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,11 +20,16 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ExportToFile {
-    @FXML private Button browseButton;
-    @FXML private Label dirLabel;
-    @FXML private TextField fileName;
+    @FXML
+    private Button browseButton;
+    @FXML
+    private Label dirLabel;
+    @FXML
+    private TextField fileName;
 
-    /** Focus on the browseButton when open the window. */
+    /**
+     * Focus on the browseButton when open the window.
+     */
     @FXML
     private void initialize() {
         Platform.runLater(() -> browseButton.requestFocus());

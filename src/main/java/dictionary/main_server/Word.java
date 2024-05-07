@@ -7,7 +7,7 @@ public class Word {
     /**
      * Constructor new Word.
      *
-     * @param wordTarget English word
+     * @param wordTarget  English word
      * @param wordExplain Vietnamese definition
      */
     public Word(String wordTarget, String wordExplain) {

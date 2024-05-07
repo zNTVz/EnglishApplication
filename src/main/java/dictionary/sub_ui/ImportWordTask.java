@@ -3,6 +3,7 @@ package dictionary.sub_ui;
 import dictionary.App;
 import dictionary.main_server.Helper;
 import dictionary.sub_ui.controller.Application;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
+
 import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -77,7 +79,9 @@ public class ImportWordTask extends Task<Void> {
         return null;
     }
 
-    /** Popup a successful information box indicating the task has been successfully executed. */
+    /**
+     * Popup a successful information box indicating the task has been successfully executed.
+     */
     @Override
     protected void succeeded() {
         Alert alert = new Alert(AlertType.INFORMATION);
@@ -95,7 +99,9 @@ public class ImportWordTask extends Task<Void> {
         alert.show();
     }
 
-    /** Popup a warning box for closing the stage while importing words. */
+    /**
+     * Popup a warning box for closing the stage while importing words.
+     */
     @Override
     protected void cancelled() {
         Alert alert = new Alert(AlertType.WARNING);
@@ -114,7 +120,9 @@ public class ImportWordTask extends Task<Void> {
         alert.show();
     }
 
-    /** Popup an error box indicating error found while importing the words. */
+    /**
+     * Popup an error box indicating error found while importing the words.
+     */
     @Override
     protected void failed() {
         Alert alert = new Alert(AlertType.ERROR);

@@ -75,7 +75,9 @@ public class DatabaseDictionary extends Dictionary {
         System.out.println("Database connected!\n");
     }
 
-    /** Connect to MYSQL database. Add all words on the database into Trie data structure. */
+    /**
+     * Connect to MYSQL database. Add all words on the database into Trie data structure.
+     */
     @Override
     public void initialize() throws SQLException {
         connectToDatabase();
@@ -85,7 +87,9 @@ public class DatabaseDictionary extends Dictionary {
         }
     }
 
-    /** Close the Database connection. */
+    /**
+     * Close the Database connection.
+     */
     @Override
     public void close() {
         close(connection);
@@ -127,7 +131,7 @@ public class DatabaseDictionary extends Dictionary {
     /**
      * Insert new word to database.
      *
-     * @param target English word
+     * @param target     English word
      * @param definition Vietnamese definition
      * @return true if `target` hasn't been added yet, false otherwise
      */
@@ -189,7 +193,7 @@ public class DatabaseDictionary extends Dictionary {
      *
      * <p>Nothing happens if `target` is not in the database for update.
      *
-     * @param target the update word
+     * @param target     the update word
      * @param definition the update definition
      * @return true if successfully updated, false otherwise
      */
@@ -260,7 +264,7 @@ public class DatabaseDictionary extends Dictionary {
      * Get all the words from the Database has `id` from `wordIndexFrom` to `wordIndexTo`.
      *
      * @param wordIndexFrom left bound
-     * @param wordIndexTo right bound
+     * @param wordIndexTo   right bound
      * @return an ArrayList of Word get from the database
      */
     public ArrayList<Word> getWordsPartial(int wordIndexFrom, int wordIndexTo) {

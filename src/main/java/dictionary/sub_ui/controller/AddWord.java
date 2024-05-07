@@ -19,14 +19,21 @@ import java.util.Objects;
 import static dictionary.App.dictionary;
 
 public class AddWord {
-    @FXML private Button browseButton;
-    @FXML private HTMLEditor htmlEditor;
-    @FXML private TextField inputText;
-    @FXML private Label fileLabel;
-    @FXML private AnchorPane anchorPane;
+    @FXML
+    private Button browseButton;
+    @FXML
+    private HTMLEditor htmlEditor;
+    @FXML
+    private TextField inputText;
+    @FXML
+    private Label fileLabel;
+    @FXML
+    private AnchorPane anchorPane;
     private ImportWordService service;
 
-    /** Focus on the `browseButton` when open the window. */
+    /**
+     * Focus on the `browseButton` when open the window.
+     */
     @FXML
     private void initialize() {
         Platform.runLater(() -> browseButton.requestFocus());

@@ -87,6 +87,7 @@ public class Helper {
 
     /**
      * Count number of lines in the file `file`.
+     *
      * @param file the path of the file
      * @return number of lines of the given file
      * @throws IOException file not found or couldn't read

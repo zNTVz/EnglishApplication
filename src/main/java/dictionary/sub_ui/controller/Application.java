@@ -35,23 +35,19 @@ import static dictionary.App.dictionary;
 public class Application {
     public static boolean lightMode = true;
     private String lastLookUpWord = "";
-    @FXML private TextField inputText;
-    @FXML private ListView<String> searchList;
-    @FXML private WebView webView;
+    @FXML
+    private TextField inputText;
+    @FXML
+    private ListView<String> searchList;
+    @FXML
+    private WebView webView;
     private int lastIndex = 0;
     private Image historyIcon;
-    @FXML private Button addWordButton;
-    @FXML private Button showInformationButton;
-    @FXML private Button showInstructionButton;
-    @FXML private Button exportButton;
-    @FXML private Button pronounceButton;
-    @FXML private Button editButton;
-    @FXML private Button deleteButton;
-    @FXML private Button googleButton;
-    @FXML private Button modeToggle;
-    @FXML private Button gameButton;
+    @FXML
+    private Button modeToggle;
 
-    public Application() {}
+    public Application() {
+    }
 
     public static boolean isLightMode() {
         return lightMode;
@@ -61,7 +57,9 @@ public class Application {
         lightMode = !lightMode;
     }
 
-    /** Focus on the inputText TextField when first open. Prepare the search list after that. */
+    /**
+     * Focus on the inputText TextField when first open. Prepare the search list after that.
+     */
     @FXML
     private void initialize() {
         Platform.runLater(() -> inputText.requestFocus());
@@ -156,7 +154,9 @@ public class Application {
         }
     }
 
-    /** Load the history icon into its corresponding icon image. */
+    /**
+     * Load the history icon into its corresponding icon image.
+     */
     private void prepareHistoryIcon(boolean mode) {
         try {
             historyIcon =
@@ -217,7 +217,9 @@ public class Application {
                 });
     }
 
-    /** Look up the word in the dictionary and show its definition in `webView`. */
+    /**
+     * Look up the word in the dictionary and show its definition in `webView`.
+     */
     @FXML
     public void lookUpWord() {
         String target = inputText.getText();
@@ -334,7 +336,9 @@ public class Application {
         }
     }
 
-    /** Pronounce the English word that is currently showed in the `webView`. */
+    /**
+     * Pronounce the English word that is currently showed in the `webView`.
+     */
     @FXML
     public void playSound() {
         if (!lastLookUpWord.isEmpty()) {
@@ -473,7 +477,9 @@ public class Application {
         }
     }
 
-    /** Open (pop up) delete confirmation for the last looked up word (in the `webView`). */
+    /**
+     * Open (pop up) delete confirmation for the last looked up word (in the `webView`).
+     */
     @FXML
     public void deleteWord() {
         if (lastLookUpWord.isEmpty()) {

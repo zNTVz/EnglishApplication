@@ -9,13 +9,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class Controller {
     @FXML
     public void changeScene(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/gameScene.fxml"));
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/gameScene.fxml")));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setTitle("Hangman Game");
         window.setScene(new Scene(parent, 800, 650));
         window.show();

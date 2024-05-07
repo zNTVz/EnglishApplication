@@ -51,7 +51,7 @@ public class LocalDictionary extends Dictionary {
     /**
      * Insert a new word to dictionary.
      *
-     * @param target the word
+     * @param target     the word
      * @param definition the definition
      * @return true if `target` hasn't been added yet, false otherwise
      */
@@ -89,7 +89,7 @@ public class LocalDictionary extends Dictionary {
     /**
      * Update the Vietnamese definition of `target` to `definition`.
      *
-     * @param target the word
+     * @param target     the word
      * @param definition the new definition
      * @return true if successfully updated, false otherwise
      */

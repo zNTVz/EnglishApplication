@@ -107,7 +107,9 @@ public class Trie {
         pCrawl.isEndOfWord = false;
     }
 
-    /** a Node on the Trie DS. */
+    /**
+     * a Node on the Trie DS.
+     */
     public static class TrieNode {
         Map<Character, TrieNode> children = new TreeMap<>();
         /* isEndOfWord is true if the node represents the end of a word */

@@ -83,7 +83,9 @@ public class History {
         refactorHistory();
     }
 
-    /** Write the words in the ArrayList to `dictionary-user-data/words-search-history.txt`. */
+    /**
+     * Write the words in the ArrayList to `dictionary-user-data/words-search-history.txt`.
+     */
     public static void exportHistory() {
         try {
             Writer out =
