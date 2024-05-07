@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
        <Label layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="153.0" text="Về ứng dụng:">
            <font>
@@ -20,7 +20,7 @@
                <Font size="14.0" />
            </font>
        </Label>
-       <Label layoutX="24.0" layoutY="64.0" prefHeight="25.0" prefWidth="177.0" text="-   Hoàn thiện: ">
+       <Label layoutX="24.0" layoutY="64.0" prefHeight="25.0" prefWidth="177.0" text="-   Hoàn thiện: 7/5/2024">
            <font>
                <Font size="14.0" />
            </font>
@@ -30,16 +30,21 @@
                <Font size="14.0" />
            </font>
        </Label>
-       <Label layoutX="24.0" layoutY="114.0" prefHeight="25.0" prefWidth="177.0">
+       <Label layoutX="24.0" layoutY="114.0" prefHeight="25.0" prefWidth="177.0" text="21020459 - Nguyễn Thế Việt">
            <font>
                <Font size="14.0" />
            </font>
        </Label>
-       <Label layoutX="24.0" layoutY="139.0" prefHeight="25.0" prefWidth="177.0">
+       <Label layoutX="24.0" layoutY="139.0" prefHeight="25.0" prefWidth="177.0" text="21020947 - Dư Hồng Tú">
            <font>
                <Font size="14.0" />
            </font>
        </Label>
+      <Label layoutX="24.0" layoutY="164.0" prefHeight="25.0" prefWidth="177.0" text="21020439 - Lê Văn Huy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
        <Label layoutX="26.0" layoutY="211.0" prefHeight="25.0" prefWidth="317.0" text="-   Tính năng:">
            <font>
                <Font size="14.0" />
@@ -50,12 +55,12 @@
                <Font size="14.0" />
            </font>
        </Label>
-       <Label layoutX="26.0" layoutY="261.0" prefHeight="25.0" prefWidth="350.0" text="     +    Tích hợp Google Translate.">
+       <Label layoutX="26.0" layoutY="261.0" prefHeight="25.0" prefWidth="446.0" text="     +   Có minigame đoán từ nhằm giải trí và trau dồi thêm vốn từ mới">
            <font>
                <Font size="14.0" />
            </font>
        </Label>
-       <Label layoutX="24.0" layoutY="189.0" prefHeight="25.0" prefWidth="332.0" text="-   Github:">
+       <Label layoutX="24.0" layoutY="189.0" prefHeight="25.0" prefWidth="457.0" text="-   Github: https://github.com/zNTVz/EnglishApplication/commits/main/">
            <font>
                <Font size="14.0" />
            </font>

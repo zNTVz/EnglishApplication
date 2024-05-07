@@ -18,7 +18,7 @@
 
 <AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.sub_ui.controller.Controller2">
     <children>
-        <Button layoutX="206.0" layoutY="558.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="63.0" prefWidth="432.0" text="TRY ANOTHER WORD" textFill="#d0184c">
+        <Button layoutX="206.0" layoutY="558.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="63.0" prefWidth="432.0" text="Thử một từ khác" textFill="#d0184c">
             <font>
                 <Font name="System Bold" size="29.0" />
             </font>
@@ -36,7 +36,7 @@
                 <Font name="System Bold" size="34.0" />
             </font>
         </Label>
-        <Label fx:id="hint_label" layoutX="43.0" layoutY="228.0" text="HINTS: " textFill="RED">
+        <Label fx:id="hint_label" layoutX="43.0" layoutY="228.0" text="Gợi ý:" textFill="RED">
             <font>
                 <Font size="30.0" />
             </font>
@@ -81,7 +81,7 @@
                 <Font size="18.0" />
             </font>
         </TextField>
-        <Label layoutX="67.0" layoutY="381.0" text="Guess the word :">
+        <Label layoutX="67.0" layoutY="381.0" text="ĐOÁN CỤM TỪ:">
             <font>
                 <Font size="31.0" />
             </font>
@@ -91,17 +91,17 @@
                 <Font size="24.0" />
             </font>
         </TextField>
-        <Label layoutX="67.0" layoutY="479.0" text="Enter a Letter :">
+        <Label layoutX="67.0" layoutY="479.0" text="Nhập một kí tự:">
             <font>
                 <Font size="31.0" />
             </font>
         </Label>
-        <Button layoutX="448.0" layoutY="476.0" mnemonicParsing="false" onAction="#CheckInput" prefHeight="51.0" prefWidth="189.0" text="Check">
+        <Button layoutX="448.0" layoutY="476.0" mnemonicParsing="false" onAction="#CheckInput" prefHeight="51.0" prefWidth="189.0" text="Kiểm tra">
             <font>
                 <Font size="24.0" />
             </font>
         </Button>
-        <TextArea editable="false" layoutX="14.0" layoutY="125.0" prefHeight="97.0" prefWidth="321.0" text="Rules: Bạn cần phải điền từng chữ cái IN HOA, &#10;từng chữ một cho đến khi ghép được từ hoàn &#10;chỉnh cần tìm. Bạn có tối đa 6 lần thử trước khi &#10;nhân vật bị treo cổ&#10;">
+        <TextArea editable="false" layoutX="14.0" layoutY="125.0" prefHeight="97.0" prefWidth="321.0" text="Luật: Bạn cần phải điền từng chữ cái IN HOA, &#10;từng chữ một cho đến khi ghép được từ hoàn &#10;chỉnh cần tìm. Bạn có tối đa 6 lần thử trước khi &#10;nhân vật bị treo cổ&#10;">
             <font>
                 <Font size="14.0" />
             </font>
