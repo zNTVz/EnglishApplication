@@ -303,38 +303,6 @@ public class Application {
         }
     }
 
-    /**
-     * Change scene to sentences translating (Google Translate).
-     *
-     * @param event action event
-     */
-    @FXML
-    public void changeToSentencesTranslating(ActionEvent event) {
-        try {
-            Parent root =
-                    FXMLLoader.load(
-                            Objects.requireNonNull(
-                                    getClass()
-                                            .getClassLoader()
-                                            .getResource("fxml/SentencesTranslating.fxml")));
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            if (!Application.isLightMode()) {
-                scene.getStylesheets()
-                        .add(
-                                Objects.requireNonNull(
-                                                getClass()
-                                                        .getResource(
-                                                                "/css/SentencesTranslating-dark.css"))
-                                        .toExternalForm());
-            }
-            appStage.setTitle("Sentences Translator");
-            appStage.setScene(scene);
-            appStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * Pronounce the English word that is currently showed in the `webView`.
