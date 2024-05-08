@@ -37,6 +37,13 @@ import static dictionary.App.dictionary;
 
 public class Application {
     public static boolean lightMode = true;
+    public Button addWordButton;
+    public Button showInformationButton;
+    public Button exportButton;
+    public Button showInstructionButton;
+    public Button pronounceButton;
+    public Button editButton;
+    public Button deleteButton;
     private String lastLookUpWord = "";
     @FXML
     private TextField inputText;
