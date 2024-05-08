@@ -30,6 +30,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import static dictionary.App.dictionary;
 
 public class Application {
@@ -45,6 +48,8 @@ public class Application {
     private Image historyIcon;
     @FXML
     private Button modeToggle;
+
+    private static final Logger logger = LogManager.getLogger(Application.class);
 
     public Application() {
     }
@@ -119,7 +124,7 @@ public class Application {
             infStage.initModality(Modality.APPLICATION_MODAL);
             infStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
 
     }
@@ -167,7 +172,7 @@ public class Application {
                                             + ".png"));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -339,7 +344,7 @@ public class Application {
             newStage.show();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -366,7 +371,7 @@ public class Application {
             infStage.initModality(Modality.APPLICATION_MODAL);
             infStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -394,7 +399,7 @@ public class Application {
             insStage.initModality(Modality.APPLICATION_MODAL);
             insStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -441,7 +446,7 @@ public class Application {
             newStage.show();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -512,7 +517,7 @@ public class Application {
             addStage.setOnCloseRequest(e -> controller.closeWhileImporting());
             addStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 

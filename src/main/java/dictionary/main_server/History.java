@@ -13,6 +13,10 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class History {
     private static final int MAX_WORDS_HISTORY = 30;
     private static final ArrayList<String> historySearch = new ArrayList<>();
@@ -20,6 +24,9 @@ public class History {
     public static ArrayList<String> getHistorySearch() {
         return historySearch;
     }
+
+    private static final Logger logger = LogManager.getLogger(History.class);
+
 
     /**
      * Load history file everytime the application is open.
@@ -45,7 +52,7 @@ public class History {
                     System.out.println("Couldn't create file `words-search-history.txt`!");
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("An error occurred:", e);
                 System.out.println("Couldn't create file `words-search-history.txt`!");
             }
             return;
@@ -63,10 +70,10 @@ public class History {
                 historySearch.add(inputLine.strip());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             System.out.println("Couldn't find " + "words-search-history.txt");
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             System.out.println("Couldn't read " + "words-search-history.txt");
         }
         refactorHistory();
@@ -102,7 +109,7 @@ public class History {
             out.close();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             System.out.println("An error occurred.`");
         }
     }

@@ -8,7 +8,15 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class TextToSpeech {
+
+    private static final Logger logger = LogManager.getLogger(TextToSpeech.class);
+
+
     /**
      * Convert English input {@code text} to voice and play it with Google Translator TTS API
      *
@@ -27,7 +35,7 @@ public class TextToSpeech {
             new Player(audio).play();
             con.disconnect();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             System.err.println("Error in getting voices");
         }
     }

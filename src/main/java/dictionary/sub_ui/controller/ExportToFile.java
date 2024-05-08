@@ -18,6 +18,8 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ExportToFile {
     @FXML
@@ -26,6 +28,8 @@ public class ExportToFile {
     private Label dirLabel;
     @FXML
     private TextField fileName;
+
+    private static final Logger logger = LogManager.getLogger(ExportToFile.class);
 
     /**
      * Focus on the browseButton when open the window.
@@ -65,7 +69,7 @@ public class ExportToFile {
                         "Thành công xuất dữ liệu ra file `" + dirPath + "\\" + file + "`");
                 alert.show();
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("An error occurred:", e);
                 Alert alert = new Alert(AlertType.ERROR);
                 setAlertCss(alert);
                 alert.setTitle("Lỗi");

@@ -15,8 +15,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class App extends javafx.application.Application {
+
+    private static final Logger logger = LogManager.getLogger(App.class);
+
     public static Dictionary dictionary;
     /**
      * Load the MYSQL Database and History words data.
@@ -54,7 +59,7 @@ public class App extends javafx.application.Application {
                     });
             primaryStage.show();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         selectDictionaryType();
     }
@@ -80,7 +85,7 @@ public class App extends javafx.application.Application {
                     alert1.setContentText("Thành công kết nối với cơ sở dữ liệu MYSQL.");
                     alert1.show();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    logger.error("An error occurred:", e);
                     Alert alert1 = new Alert(AlertType.ERROR);
                     alert1.setTitle("Lỗi");
                     alert1.setContentText(

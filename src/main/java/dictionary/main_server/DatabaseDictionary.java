@@ -8,7 +8,13 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class DatabaseDictionary extends Dictionary {
+    private static final Logger logger = LogManager.getLogger(DatabaseDictionary.class);
+
     private static final String HOST_NAME = "localhost";
     private static final String DB_NAME = "dictionary";
     private static final String USER_NAME = "ntv";
@@ -30,7 +36,7 @@ public class DatabaseDictionary extends Dictionary {
                 connection.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -45,7 +51,7 @@ public class DatabaseDictionary extends Dictionary {
                 ps.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -60,7 +66,7 @@ public class DatabaseDictionary extends Dictionary {
                 rs.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
     }
 
@@ -123,7 +129,7 @@ public class DatabaseDictionary extends Dictionary {
                 close(ps);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         return "404";
     }
@@ -153,7 +159,7 @@ public class DatabaseDictionary extends Dictionary {
             Trie.insert(target);
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             return false;
         }
     }
@@ -183,7 +189,7 @@ public class DatabaseDictionary extends Dictionary {
             Trie.delete(target);
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             return false;
         }
     }
@@ -213,7 +219,7 @@ public class DatabaseDictionary extends Dictionary {
                 close(ps);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         return true;
     }
@@ -255,7 +261,7 @@ public class DatabaseDictionary extends Dictionary {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
             return getWordsFromResultSet(ps);
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         return new ArrayList<>();
     }
@@ -275,7 +281,7 @@ public class DatabaseDictionary extends Dictionary {
             ps.setInt(2, wordIndexTo);
             return getWordsFromResultSet(ps);
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         return new ArrayList<>();
     }
@@ -306,7 +312,7 @@ public class DatabaseDictionary extends Dictionary {
                 close(ps);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
         }
         return new ArrayList<>();
     }

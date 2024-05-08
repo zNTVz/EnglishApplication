@@ -1,74 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="648.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.sub_ui.controller.AddWord">
-   <children>
-       <TextField fx:id="inputText" layoutX="16.0" layoutY="204.0" prefHeight="44.0" prefWidth="306.0" promptText="Nhập từ cần thêm vào đây" text="Nhập từ bạn muốn thêm vào đây">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </TextField>
-       <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="338.0" layoutY="202.0" prefHeight="391.0" prefWidth="528.0" />
-       <Label layoutX="16.0" layoutY="169.0" prefHeight="34.0" prefWidth="102.0" text="Từ muốn thêm">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Label>
-       <Label layoutX="338.0" layoutY="152.0" prefHeight="34.0" prefWidth="581.0" text="Nghĩa của từ ">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Label>
-       <Button layoutX="796.0" layoutY="602.0" mnemonicParsing="false" onAction="#saveWord" prefHeight="36.0" prefWidth="64.0" text="Lưu">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Button>
-       <Button layoutX="715.0" layoutY="602.0" mnemonicParsing="false" onAction="#quitWindow" prefHeight="36.0" prefWidth="64.0" text="Hủy">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Button>
-       <Button fx:id="browseButton" layoutX="29.0" layoutY="61.0" onAction="#chooseFile" prefHeight="33.0" prefWidth="80.0" text="Browse...">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Button>
-       <Label fx:id="fileLabel" layoutX="129.0" layoutY="61.0" prefHeight="33.0" prefWidth="699.0">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Label>
-       <Button layoutX="793.0" layoutY="61.0" onAction="#submitImport" prefHeight="33.0" prefWidth="71.0" text="Import">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Button>
-       <Label alignment="CENTER" layoutX="383.0" layoutY="121.0" prefHeight="31.0" prefWidth="64.0" text="Hoặc">
-           <font>
-               <Font size="18.0" />
-           </font>
-       </Label>
-       <Label layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="504.0" text="Nhập từ file (Mỗi dòng gồm: &quot;từ&quot;, dấu TAB và  &quot;nghĩa tương ứng&quot;)">
-           <font>
-               <Font size="14.0" />
-           </font>
-       </Label>
-      <Label layoutX="29.0" layoutY="602.0" prefHeight="35.0" prefWidth="457.0" text="  (Chú ý: Sử dụng tiếng Việt không dấu)">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane fx:id="anchorPane" prefHeight="648.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.sub_ui.controller.AddWord">
+    <TextField fx:id="inputText" layoutX="16.0" layoutY="204.0" prefHeight="44.0" prefWidth="306.0"
+               promptText="Nhập từ cần thêm vào đây" text="Nhập từ bạn muốn thêm vào đây">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </TextField>
+    <HTMLEditor fx:id="htmlEditor"
+                htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;"
+                layoutX="338.0" layoutY="202.0" prefHeight="391.0" prefWidth="528.0"/>
+    <Label layoutX="16.0" layoutY="169.0" prefHeight="34.0" prefWidth="102.0" text="Từ muốn thêm">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Label layoutX="338.0" layoutY="152.0" prefHeight="34.0" prefWidth="581.0" text="Nghĩa của từ ">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Button layoutX="796.0" layoutY="602.0" mnemonicParsing="false" onAction="#saveWord" prefHeight="36.0"
+            prefWidth="64.0" text="Lưu">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Button layoutX="715.0" layoutY="602.0" mnemonicParsing="false" onAction="#quitWindow" prefHeight="36.0"
+            prefWidth="64.0" text="Hủy">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Button fx:id="browseButton" layoutX="29.0" layoutY="61.0" onAction="#chooseFile" prefHeight="33.0" prefWidth="80.0"
+            text="Browse...">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Label fx:id="fileLabel" layoutX="129.0" layoutY="61.0" prefHeight="33.0" prefWidth="699.0">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Button layoutX="793.0" layoutY="61.0" onAction="#submitImport" prefHeight="33.0" prefWidth="71.0" text="Import">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Label alignment="CENTER" layoutX="383.0" layoutY="121.0" prefHeight="31.0" prefWidth="64.0" text="Hoặc">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label layoutX="29.0" layoutY="14.0" prefHeight="34.0" prefWidth="504.0"
+           text="Nhập từ file (Mỗi dòng gồm: &quot;từ&quot;, dấu TAB và  &quot;nghĩa tương ứng&quot;)">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <Label layoutX="29.0" layoutY="602.0" prefHeight="35.0" prefWidth="457.0"
+           text="  (Chú ý: Sử dụng tiếng Việt không dấu)">
+        <font>
+          <Font size="24.0"/>
+        </font>
+    </Label>
 </AnchorPane>

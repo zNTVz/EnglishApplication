@@ -11,11 +11,15 @@ import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.DialogPane;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ImportWordTask extends Task<Void> {
     private final String file;
     private int numWordsInserted = 0;
     private int numWords;
+
+    private static final Logger logger = LogManager.getLogger(ImportWordTask.class);
 
     public ImportWordTask(String file) {
         this.file = file;
@@ -65,14 +69,14 @@ public class ImportWordTask extends Task<Void> {
             }
             in.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             Alert alert = new Alert(AlertType.ERROR);
             setAlertCss(alert);
             alert.setTitle("Lỗi");
             alert.setContentText("Không tìm thấy đường dẫn của file `" + file + "`!");
             alert.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("An error occurred:", e);
             Alert alert = new Alert(AlertType.ERROR);
             setAlertCss(alert);
             alert.setTitle("Lỗi");
