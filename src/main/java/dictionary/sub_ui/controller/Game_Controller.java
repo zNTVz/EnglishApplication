@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 
-public class Controller {
+public class Game_Controller {
     @FXML
     public void changeScene(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/gameScene.fxml")));

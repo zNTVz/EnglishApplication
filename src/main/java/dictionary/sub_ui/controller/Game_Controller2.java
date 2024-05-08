@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Random;
 
-public class Controller2 {
+public class Game_Controller2 {
     @FXML
     ImageView img;
     Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/hangman1.png")));
