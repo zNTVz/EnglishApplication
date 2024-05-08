@@ -1,14 +1,9 @@
 package dictionary.sub_ui;
 
 import dictionary.App;
-import dictionary.main_server.Helper;
 import dictionary.sub_ui.controller.Application;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
@@ -26,6 +21,14 @@ public class ImportWordTask extends Task<Void> {
         this.file = file;
     }
 
+    public static int countNumLinesOfFile(String file) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        int lines = 0;
+        while (reader.readLine() != null) lines++;
+        reader.close();
+        return lines;
+    }
+
     /**
      * Import words to dictionary from `file`. Update the progress bar at the same time.
      *
@@ -39,7 +42,7 @@ public class ImportWordTask extends Task<Void> {
                             new InputStreamReader(
                                     new FileInputStream(file), StandardCharsets.UTF_8));
             String inputLine;
-            numWords = Helper.countNumLinesOfFile(file);
+            numWords = countNumLinesOfFile(file);
             int counter = 0;
             while ((inputLine = in.readLine()) != null) {
                 if (isCancelled()) {
