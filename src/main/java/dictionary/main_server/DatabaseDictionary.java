@@ -73,7 +73,7 @@ public class DatabaseDictionary extends Dictionary {
     /**
      * Connect to MYSQL database.
      *
-     * <p>Reference: https://stackoverflow.com/questions/2839321/connect-java-to-a-mysql-database
+     * <p>Reference: <a href="https://stackoverflow.com/questions/2839321/connect-java-to-a-mysql-database">...</a>
      */
     private void connectToDatabase() throws SQLException {
         System.out.println("Connecting to database...");
@@ -143,7 +143,7 @@ public class DatabaseDictionary extends Dictionary {
      */
     @Override
     public boolean insertWord(final String target, final String definition) {
-        final String SQL_QUERY = "INSERT INTO dictionary (target, definition) VALUES (?, ?)";
+        final String SQL_QUERY = "INSERT INTO `dictionary` (target, definition) VALUES (?, ?)";
         try {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
             ps.setString(1, target);
@@ -274,7 +274,7 @@ public class DatabaseDictionary extends Dictionary {
      * @return an ArrayList of Word get from the database
      */
     public ArrayList<Word> getWordsPartial(int wordIndexFrom, int wordIndexTo) {
-        final String SQL_QUERY = "SELECT * FROM dictionary WHERE id >= ? AND id <= ?";
+        final String SQL_QUERY = "select * from (SELECT * FROM dictionary WHERE id >= ? AND id <= ?) `d*`";
         try {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
             ps.setInt(1, wordIndexFrom);
