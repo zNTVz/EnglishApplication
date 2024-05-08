@@ -266,25 +266,6 @@ public class DatabaseDictionary extends Dictionary {
         return new ArrayList<>();
     }
 
-    /**
-     * Get all the words from the Database has `id` from `wordIndexFrom` to `wordIndexTo`.
-     *
-     * @param wordIndexFrom left bound
-     * @param wordIndexTo   right bound
-     * @return an ArrayList of Word get from the database
-     */
-    public ArrayList<Word> getWordsPartial(int wordIndexFrom, int wordIndexTo) {
-        final String SQL_QUERY = "select * from (SELECT * FROM dictionary WHERE id >= ? AND id <= ?) `d*`";
-        try {
-            PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
-            ps.setInt(1, wordIndexFrom);
-            ps.setInt(2, wordIndexTo);
-            return getWordsFromResultSet(ps);
-        } catch (SQLException e) {
-            logger.error("An error occurred:", e);
-        }
-        return new ArrayList<>();
-    }
 
     /**
      * Get all words target from the database (only target, non include the definition).
